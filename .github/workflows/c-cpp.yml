@@ -21,7 +21,7 @@ jobs:
           libgmp-dev libmpfr-dev libmpc-dev
 
     - name: configure
-      run: ./configure
+      run: ./configure --disable-multilib
 
     - name: make
       run: make
