@@ -14,6 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install build tools
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential autotools-dev automake autoconf libtool
+
     - name: configure
       run: ./configure
 
